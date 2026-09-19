@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@egohygiene/store-config": "workspace:*",
-    "zod": "^4.0.17"
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "vitest": "^4.1.10"
