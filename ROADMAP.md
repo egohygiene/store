@@ -8,7 +8,7 @@ status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-24
+updated: 2026-10-16
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -25,6 +25,16 @@ supersedes: []
 ---
 
 # Ego Hygiene Store Roadmap
+
+## 2026-10-16 launch discussion proposal
+
+Read the [current handoff](docs/context/current-state.md) and the coordinated
+[milestone/parent-issue/sub-issue proposal](https://github.com/egohygiene/egohygiene.io/blob/docs/store-launch-direction-20261016/docs/roadmaps/store-launch.md)
+before using the historical execution snapshot below. The proposal reuses
+existing issues and identifies unresolved ownership between this store and the
+website's store feature. The maintainer must approve the hierarchy before
+issues/milestones are created or reorganized, followed by another sync before
+implementation. This note does not mark old roadmap work complete.
 
 <!-- BEGIN ROADMAP EXECUTION SNAPSHOT -->
 <!-- roadmap-manifest
@@ -257,3 +267,4 @@ Optional managed services, enterprise controls, marketplaces, and the conversati
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?
+

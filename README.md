@@ -7,6 +7,10 @@ shipping, and order operations.
 The repository boots in **mock commerce mode**, so it runs immediately without
 credentials. Switch one environment variable to connect a real Fourthwall shop.
 
+Start architecture work with the [current handoff](docs/context/current-state.md).
+It links the launch discussion and the cross-repository plan. A configured
+adapter does not establish provider qualification or a production-ready shop.
+
 ## Architecture
 
 ```text
@@ -73,9 +77,16 @@ pnpm check
 
 ## Deployment model
 
-The application builds with `/store/` as its public base path. The main
-`egohygiene.io` gateway can proxy `/store/*` to this project's independent
-Vercel deployment.
+The application builds with `/store/` as its public base path. Existing Vercel
+configuration describes an independent deployment option; it is not the chosen
+production platform. The website repository also implements a store. Canonical
+ownership and either a composed build or independent path routing must be
+resolved before deployment. The public goal remains `egohygiene.io/store`.
+
+The October 16 direction prefers Netlify development previews triggered by
+merges into `development`, using a reusable GitHub Actions workflow. Production
+hosting remains undecided between Cloudflare and Google. This documentation
+does not configure or activate that pipeline.
 
 See [`docs/domain-routing.md`](docs/domain-routing.md).
 
@@ -108,3 +119,4 @@ Deliberately deferred:
 ## License
 
 MIT
+

@@ -4,6 +4,22 @@
 
 Maintain a small, explicit, provider-neutral commerce frontend for Ego Hygiene.
 
+## Start or resume
+
+Read [current state](docs/context/current-state.md), its dated discussion
+checkpoint, and the linked canonical launch plan before changing architecture.
+Refresh both repositories' heads, PRs, and checks: this store and the store
+inside `egohygiene/egohygiene.io` overlap, and canonical ownership is unresolved.
+Consult [DECISIONS.md](DECISIONS.md) for durable decisions; dated conversation
+notes preserve the reasoning, preferences, and open questions behind them.
+
+At a checkpoint, update current state and add a dated note with source commits,
+decisions, actual validation, unresolved questions, and the next action. Do not
+replace historical notes with a transcript or treat them as new authorization.
+The current scope is documentation and review; issue creation, repository
+transfer, provider activation, purchases, and deployment are not authorized by
+these records. Follow subsequent explicit user instructions when scope changes.
+
 ## Dependency direction
 
 ```text
@@ -38,3 +54,4 @@ modules.
 - Use long-form CLI flags in documentation and scripts.
 - Shell functions must have shdoc-compatible docstrings.
 - Prefer `printf` over `echo`.
+
