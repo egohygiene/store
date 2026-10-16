@@ -9,6 +9,7 @@ Snapshot: **2026-10-16**. Discussion capture, not deployment completion.
 | Website source inspected | `egohygiene/egohygiene.io` at `db634b887ede348ce85d9c03af789467ab535dcf` |
 | Intended review branch | `docs/store-launch-direction-20261016` |
 | Work | Documentation-only capture; PR/merge state must be refreshed on GitHub |
+| Review | [Store draft PR #33](https://github.com/egohygiene/store/pull/33), paired with [website draft PR #74](https://github.com/egohygiene/egohygiene.io/pull/74); both unmerged at this checkpoint |
 | Next decision | Review the proposed milestone/issue hierarchy before creating issues |
 
 Read the [dated checkpoint](2026-10-16-store-launch-discussion.md) for granular
