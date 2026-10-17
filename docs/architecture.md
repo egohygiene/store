@@ -1,14 +1,18 @@
 # Store Architecture
 
-For the October 16 launch direction and unresolved overlap with the website's
-store implementation, read the [current handoff](context/current-state.md).
-The boundaries below describe this repository's implementation; they do not
-settle cross-repository ownership or establish a live deployment.
+Read the [current handoff](context/current-state.md) and
+[ADR-005](../DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner)
+before architecture changes. The issue #75 comparison selects the website as
+the canonical V1 app and one composed build in paired drafts for review. The
+boundaries below describe this preserved reference implementation, not an
+accepted second production deployment.
 
 ## System boundary
 
-The repository owns the customer-facing shopping experience. Fourthwall owns
-commerce operations after the application hands off to hosted checkout.
+This repository implements a standalone reference shopping experience. Under
+the selected direction, the website owns the V1 customer-facing site. Selected
+commerce capabilities may be adapted into that app after qualification; provider
+operations stay behind contracts, with provider-hosted checkout.
 
 ```text
 apps/storefront
@@ -51,7 +55,24 @@ onboarding, automated tests, and visual development.
 ### Fourthwall
 
 Fetches the public product catalog through the Storefront API and redirects a
-real cart to hosted checkout.
+provider cart to hosted checkout when configured. This is implemented behavior,
+not evidence of a verified live provider session or completed order.
+
+## Preservation and qualification
+
+Preserve `packages/commerce`'s normalized client and adapters, configuration
+parsing, mock fixtures, and useful cart/UI behavior as source candidates. Keep
+the original revision and MIT notice with any substantial copied code. The
+website's public catalog, identifiers, purchase-state gates, and design/song
+relationships remain authoritative for the selected app; provider responses
+must not replace that catalog wholesale.
+
+At the inspected revision, tests cover mock cart basics, configuration, money
+formatting, and one add-to-cart browser path. No Fourthwall adapter-specific
+tests or checkout-handoff assertion were found. Cart IDs use one unscoped browser
+storage key; mock contents are in memory. Mutation error feedback, concurrent
+changes, invalid prices/stock payloads, and modal focus behavior need
+qualification before reuse. These observations do not claim fresh test runs.
 
 ## Future proxy
 

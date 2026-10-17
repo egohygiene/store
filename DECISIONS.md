@@ -3,12 +3,12 @@ schema: aether.architecture-document/v1
 id: store-decisions
 title: Ego Hygiene Store Decisions
 kind: architecture-document
-version: 0.2.0
+version: 0.3.0
 status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-10-16
+updated: 2026-10-17
 governed_by:
   - architecture-decisions
 depends_on:
@@ -41,6 +41,7 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 - ADR-002: Use hosted checkout
 - ADR-003: Deploy independently beneath the /store route
 - ADR-004: Preserve the community-store direction and reconcile deployment ownership
+- ADR-005: Select the website as the V1 storefront owner (proposed for review)
 
 ## ADR-001: Normalize providers behind a commerce port
 
@@ -78,6 +79,10 @@ repositories contain store implementations. This conflict must be reconciled;
 neither decision is silently superseded by the current discussion. Independent
 path routing and a composed build remain options, not approved topology.
 
+The subsequent [ADR-005](#adr-005-select-the-website-as-the-v1-storefront-owner)
+selects a successor direction for review. This October 16 note remains the
+historical conflict record, not the current work queue.
+
 ## ADR-004: Preserve the community-store direction and reconcile deployment ownership
 
 - **Status:** Accepted product goals and development-preview preference;
@@ -111,10 +116,50 @@ path routing and a composed build remain options, not approved topology.
 - **Reconsider when:** The user approves canonical ownership, topology, or a
   production host, or provider evidence changes a proposed purchase flow.
 
+## ADR-005: Select the website as the V1 storefront owner
+
+- **Status:** Proposed for review in paired ownership PRs. The comparison is
+  complete; deployment and source migration have not occurred.
+- **Date:** 2026-10-17 UTC.
+- **Issue:** [Website #75](https://github.com/egohygiene/egohygiene.io/issues/75).
+- **Context:** Both repositories contain real React/Vite storefronts. The
+  website already preserves stable design, product, and collection routes, an
+  approved public catalog projection, portable domain logic, and the broader
+  Ego Hygiene site. This repository has useful commerce and cart code, but
+  lacks equivalent catalog publication boundaries and live-provider evidence.
+- **Selected direction:** Make `egohygiene/egohygiene.io` the canonical V1
+  customer-facing app and compose one site build. Keep `egohygiene/store` as a
+  preserved commerce reference and research source. Reuse useful capabilities
+  selectively through the website's contracts after qualification. Keep
+  provider-hosted checkout and separate provider flows.
+- **Preservation:** Retain this repository, source history, mock environment,
+  commerce ports, tests, existing issues, and MIT notice. Do not archive,
+  transfer, delete, copy an entire app, or migrate private creative repositories
+  as part of this decision. Any substantial copied code must retain its license
+  notice and record its immutable source revision and destination.
+- **Qualification:** The Fourthwall adapter has no adapter-specific tests at
+  the inspected revision. Mock unit coverage and the single cart E2E do not
+  prove hosted checkout, successful payment, or fulfillment. Reuse must address
+  cart persistence/error/concurrency behavior, modal accessibility, provider
+  response validation, and current provider contracts before live activation.
+- **Consequences:** The website owns one deployment coordinator. Existing Vercel
+  and prefix-stripping examples here are historical reference, not instructions
+  to deploy a second store. Netlify preview work remains under website #29;
+  Google versus Cloudflare production hosting remains open.
+- **Supersession on acceptance:** Replace ADR-003's independent V1 deployment
+  direction and resolve the ownership/topology questions in ADR-004. Preserve
+  those records and their product goals. ADR-001 and ADR-002 remain applicable.
+- **Evidence and counterpart:** [Ownership comparison](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/storefront-ownership.md),
+  [website ADR 0007](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/decisions/0007-canonical-storefront-owner.md),
+  and [dated receipt](docs/context/2026-10-17-storefront-ownership.md).
+- **Reconsider when:** A qualified requirement needs independent release,
+  hosting, or security boundaries strongly enough to justify a second app;
+  document its contract and cutover plan before changing topology.
+
 ## Open decisions
 
-- Canonical store owner and migration/preservation plan across both actual implementations.
-- Composed build versus independent deployments with path routing.
+- Acceptance of ADR-005 and its preservation plan in the paired ownership PRs.
+- Which commerce capabilities to reuse after qualification, and their destination contracts.
 - Production hosting and the exact implementation of the development-preview workflow.
 - Release and compatibility policy for the first stable version.
 - Exact self-hosted, managed, and organization-integrated deployment boundaries.

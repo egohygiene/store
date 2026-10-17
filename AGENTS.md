@@ -2,23 +2,28 @@
 
 ## Mission
 
-Maintain a small, explicit, provider-neutral commerce frontend for Ego Hygiene.
+Preserve the provider-neutral commerce reference and its evidence while the
+website owns the proposed V1 customer-facing storefront.
 
 ## Start or resume
 
-Read [current state](docs/context/current-state.md), its dated discussion
-checkpoint, and the linked canonical launch plan before changing architecture.
-Refresh both repositories' heads, PRs, and checks: this store and the store
-inside `egohygiene/egohygiene.io` overlap, and canonical ownership is unresolved.
+Read [current state](docs/context/current-state.md), its latest dated checkpoint,
+and the linked ownership comparison before changing architecture. Refresh both
+repositories' heads, PRs, and checks. Website issue #75 selects
+`egohygiene/egohygiene.io` and one composed V1 build for review; this repository
+retains useful commerce code and research. The paired ownership PRs are drafts,
+so do not mistake the selection for an accepted deployment or completed migration.
 Consult [DECISIONS.md](DECISIONS.md) for durable decisions; dated conversation
 notes preserve the reasoning, preferences, and open questions behind them.
 
 At a checkpoint, update current state and add a dated note with source commits,
 decisions, actual validation, unresolved questions, and the next action. Do not
 replace historical notes with a transcript or treat them as new authorization.
-The current scope is documentation and review; issue creation, repository
-transfer, provider activation, purchases, and deployment are not authorized by
-these records. Follow subsequent explicit user instructions when scope changes.
+The latest instruction authorized merging the planning PRs and undertaking the
+first bounded ownership issue. The wider proposed issue hierarchy still awaits
+review. Repository transfer, provider activation, purchases, and deployment are
+not authorized by these records. Follow later explicit instructions when scope
+changes.
 
 ## Dependency direction
 

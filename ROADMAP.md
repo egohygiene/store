@@ -3,12 +3,12 @@ schema: aether.architecture-document/v1
 id: store-roadmap
 title: Ego Hygiene Store Roadmap
 kind: architecture-document
-version: 0.1.0
+version: 0.1.1
 status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-10-16
+updated: 2026-10-17
 governed_by:
   - architecture-roadmap
 depends_on:
@@ -26,15 +26,20 @@ supersedes: []
 
 # Ego Hygiene Store Roadmap
 
-## 2026-10-16 launch discussion proposal
+## 2026-10-17 ownership checkpoint
 
 Read the [current handoff](docs/context/current-state.md) and the coordinated
-[milestone/parent-issue/sub-issue proposal](https://github.com/egohygiene/egohygiene.io/blob/docs/store-launch-direction-20261016/docs/roadmaps/store-launch.md)
-before using the historical execution snapshot below. The proposal reuses
-existing issues and identifies unresolved ownership between this store and the
-website's store feature. The maintainer must approve the hierarchy before
-issues/milestones are created or reorganized, followed by another sync before
-implementation. This note does not mark old roadmap work complete.
+[milestone/parent-issue/sub-issue proposal](https://github.com/egohygiene/egohygiene.io/blob/ee59e2f83c59c084c23a5f8bcc3311c2dc830859/docs/roadmaps/store-launch.md)
+before using the historical execution snapshot below. The planning PRs merged,
+and the user authorized the first bounded issue,
+[website #75](https://github.com/egohygiene/egohygiene.io/issues/75). Its paired
+drafts select the website as V1 storefront owner and preserve this repository as
+a commerce reference. The wider issue hierarchy remains a proposal; do not
+duplicate existing issues or move their ownership implicitly. Store #32 retains
+cart/handoff qualification evidence, and website #29 retains CI/hosting work.
+Review the [ownership receipt](docs/context/2026-10-17-storefront-ownership.md)
+before the next implementation step. Historical roadmap gates below are not
+marked complete by a documentation comparison.
 
 <!-- BEGIN ROADMAP EXECUTION SNAPSHOT -->
 <!-- roadmap-manifest
