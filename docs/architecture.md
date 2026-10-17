@@ -1,5 +1,10 @@
 # Store Architecture
 
+For the October 16 launch direction and unresolved overlap with the website's
+store implementation, read the [current handoff](context/current-state.md).
+The boundaries below describe this repository's implementation; they do not
+settle cross-repository ownership or establish a live deployment.
+
 ## System boundary
 
 The repository owns the customer-facing shopping experience. Fourthwall owns
@@ -52,3 +57,4 @@ real cart to hosted checkout.
 
 A server-side proxy can be introduced later without changing page components:
 implement another `CommerceClient` adapter that calls `/api/storefront/*`.
+

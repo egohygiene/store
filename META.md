@@ -3,12 +3,12 @@ schema: aether.architecture-document/v1
 id: store-meta
 title: Ego Hygiene Store Meta
 kind: architecture-document
-version: 0.1.0
+version: 0.1.1
 status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-08-19
+updated: 2026-10-16
 governed_by:
   - architecture-meta
 depends_on:
@@ -29,6 +29,11 @@ supersedes: []
 Ego Hygiene Store's architecture is an 18-document graph materialized from the Aether architecture specifications. Each document owns one bounded concern. This index maps ownership and relationships without replacing the documents themselves.
 
 ## Document inventory
+
+Operational continuity starts at [current state](docs/context/current-state.md)
+and its dated discussion checkpoint. These records link source revisions,
+conversation decisions, and remaining questions; they supplement this
+architecture graph rather than replace its durable decisions.
 
 | Artifact | Path | Category | Status | Governing specification | Upstream dependencies |
 | --- | --- | --- | --- | --- | --- |
@@ -111,3 +116,4 @@ A material upstream change triggers review of every downstream node. Implementat
 - **Decided for this draft:** The repository owns the bounded concern described here and participates through versioned contracts.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?
+
