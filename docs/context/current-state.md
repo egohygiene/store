@@ -10,6 +10,7 @@ no deployment or source migration.
 | Planning PR | [Store #33](https://github.com/egohygiene/store/pull/33), merged at `bfda1a7c6b0ce09258522be8d8fe4bf9cba8b5a3` |
 | Paired planning PR | [Website #74](https://github.com/egohygiene/egohygiene.io/pull/74), merged at `ee59e2f83c59c084c23a5f8bcc3311c2dc830859` |
 | First authorized issue | [Website #75](https://github.com/egohygiene/egohygiene.io/issues/75) |
+| Ownership review PRs | [Store draft #34](https://github.com/egohygiene/store/pull/34) and [website draft #76](https://github.com/egohygiene/egohygiene.io/pull/76); both open/unmerged at this checkpoint |
 | Ownership review branch | `docs/storefront-ownership-75` in both repositories; refresh PR state before resuming |
 | Selected direction | Website app owns V1 storefront; one composed site build; this repository remains a preserved commerce reference |
 | Next decision | Review the paired ownership drafts, then continue the approved implementation queue |

@@ -74,3 +74,21 @@ deployment, archive, repository transfer, or purchase was performed.
 Documentation checks cover relative link targets against the repository tree,
 available anchors, fence balance, whitespace, and final newlines. Application
 tests were not rerun for this documentation-only ownership checkpoint.
+
+## Publication and verification receipt
+
+[Store draft PR #34](https://github.com/egohygiene/store/pull/34) and
+[website draft PR #76](https://github.com/egohygiene/egohygiene.io/pull/76) preserve
+this result for the next sync. Initial comparison commits are store
+`4531e46c383a94db3119dc7e6917bc2c32fc9d26` and website
+`9c37849de420ce5434de39eff0272286d98a9a89`; the following context-only commit
+adds these PR receipts. Both ownership PRs remain unmerged.
+
+Combined checks passed: 174 relative links, eight paired-tree draft links, ten
+available anchors, 14 website manifest paths, JSON, fences/newlines, and
+changed-line whitespace. Independent review confirmed the source comparison
+and corrected the reciprocal ADR anchor. Existing CI was inspected before the
+planning merges: website validation reported 37 formatting errors and dependency
+review reported unsupported/Dependency graph; store Quality gates passed and
+E2E failed at the ambiguous Black / Small locator. Refresh the new PR checks;
+none of this asserts that new runtime/provider tests passed.
