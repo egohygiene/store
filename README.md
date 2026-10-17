@@ -1,11 +1,18 @@
 # Ego Hygiene Store
 
-A modular React + Vite storefront for `egohygiene.io/store`, designed to use
-Fourthwall for products, carts, hosted checkout, manufacturing, fulfillment,
-shipping, and order operations.
+A preserved React + Vite commerce reference for Ego Hygiene, with mock and
+Fourthwall adapters, cart operations, and hosted-checkout handoff code.
+
+[Website issue #75](https://github.com/egohygiene/egohygiene.io/issues/75) selects
+the existing website app as the canonical V1 storefront, with one composed
+build, in paired draft PRs for review. This repository remains available for
+selective reuse and provider research; it is not archived or replaced by a third
+implementation. See [ADR-005](DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner).
 
 The repository boots in **mock commerce mode**, so it runs immediately without
-credentials. Switch one environment variable to connect a real Fourthwall shop.
+credentials. Fourthwall mode additionally requires a Storefront token and
+checkout-domain configuration; configured code is not evidence of a qualified
+live purchase path.
 
 Start architecture work with the [current handoff](docs/context/current-state.md).
 It links the launch discussion and the cross-repository plan. A configured
@@ -77,11 +84,12 @@ pnpm check
 
 ## Deployment model
 
-The application builds with `/store/` as its public base path. Existing Vercel
-configuration describes an independent deployment option; it is not the chosen
-production platform. The website repository also implements a store. Canonical
-ownership and either a composed build or independent path routing must be
-resolved before deployment. The public goal remains `egohygiene.io/store`.
+This reference application still builds with `/store/` as its public base path.
+Its existing Vercel configuration is retained historical implementation. The
+selected V1 direction gives the website one composed build for `/`, `/store`,
+and its other public routes. Do not connect this repository to a competing
+deployment destination. Ownership remains under review in the paired draft PRs;
+no hosting configuration changes are included.
 
 The October 16 direction prefers Netlify development previews triggered by
 merges into `development`, using a reusable GitHub Actions workflow. Production
@@ -100,7 +108,7 @@ Included:
 - provider-neutral cart operations
 - hosted-checkout redirect
 - persistent cart identifier
-- responsive accessible shell
+- responsive shell with reduced-motion styles; accessibility qualification remains
 - dark cosmic visual foundation
 - unit and end-to-end test scaffolding
 - Vercel and GitHub Actions configuration

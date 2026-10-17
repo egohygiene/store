@@ -1,67 +1,64 @@
 # Current handoff
 
-Snapshot: **2026-10-16**. Discussion capture, not deployment completion.
+Snapshot: **2026-10-17 UTC**. Ownership comparison and review checkpoint;
+no deployment or source migration.
 
 | Record | State |
 | --- | --- |
 | Repository | `egohygiene/store` |
-| Source main inspected | `599c90ca6a454c0f2e9aa95eab5f8395016474c5` |
-| Website source inspected | `egohygiene/egohygiene.io` at `db634b887ede348ce85d9c03af789467ab535dcf` |
-| Intended review branch | `docs/store-launch-direction-20261016` |
-| Work | Documentation-only capture; PR/merge state must be refreshed on GitHub |
-| Review | [Store draft PR #33](https://github.com/egohygiene/store/pull/33), paired with [website draft PR #74](https://github.com/egohygiene/egohygiene.io/pull/74); both unmerged at this checkpoint |
-| Next decision | Review the proposed milestone/issue hierarchy before creating issues |
+| Source implementation inspected | `599c90ca6a454c0f2e9aa95eab5f8395016474c5` |
+| Planning PR | [Store #33](https://github.com/egohygiene/store/pull/33), merged at `bfda1a7c6b0ce09258522be8d8fe4bf9cba8b5a3` |
+| Paired planning PR | [Website #74](https://github.com/egohygiene/egohygiene.io/pull/74), merged at `ee59e2f83c59c084c23a5f8bcc3311c2dc830859` |
+| First authorized issue | [Website #75](https://github.com/egohygiene/egohygiene.io/issues/75) |
+| Ownership review branch | `docs/storefront-ownership-75` in both repositories; refresh PR state before resuming |
+| Selected direction | Website app owns V1 storefront; one composed site build; this repository remains a preserved commerce reference |
+| Next decision | Review the paired ownership drafts, then continue the approved implementation queue |
 
-Read the [dated checkpoint](2026-10-16-store-launch-discussion.md) for granular
-conversation context, and [ADR-004](../../DECISIONS.md#adr-004-preserve-the-community-store-direction-and-reconcile-deployment-ownership)
-for the durable direction. The
-[canonical launch-plan draft](https://github.com/egohygiene/egohygiene.io/blob/docs/store-launch-direction-20261016/docs/architecture/store-launch-plan.md)
-lives in the website repository. Its branch link is intentional while review is
-pending; record the merged commit and update the pointer after integration.
-The [proposed milestones and sub-issues](https://github.com/egohygiene/egohygiene.io/blob/docs/store-launch-direction-20261016/docs/roadmaps/store-launch.md)
-map existing work in both repositories. They are review input, not created issues.
+Start with the [latest dated receipt](2026-10-17-storefront-ownership.md),
+[canonical comparison](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/storefront-ownership.md),
+and [ADR-005](../../DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner).
+The [October 16 discussion](2026-10-16-store-launch-discussion.md) remains
+historical context. The planning PRs are merged; its earlier approval gate is
+superseded only for the authorized first ownership issue. The wider
+[roadmap proposal](https://github.com/egohygiene/egohygiene.io/blob/ee59e2f83c59c084c23a5f8bcc3311c2dc830859/docs/roadmaps/store-launch.md)
+still needs review before bulk issue/milestone creation or reorganization.
 
-## Preserve these distinctions
+## Boundaries to preserve
 
-- Ego Hygiene owns the site's primary mission and future product. Community
-  commerce belongs at `/store`; `.play()` is a featured artist. Curated
-  standalone designs and the roughly 400-song merch catalog need separate
-  browsing surfaces, with stable song destinations for SoundCloud links.
-- Both repositories contain store implementations. This repository's ADR-003
-  favors independent deployment; the website's high-level ADR-004 favors an
-  integrated store. Neither has been silently superseded.
-- Local development plus a hosted Netlify preview after merges into
-  `development` is the preferred workflow. Reusable GitHub Actions are desired;
-  the branch, protection rules, credentials, and workflow are not configured by
-  this checkpoint. Production hosting remains Google versus Cloudflare.
-- Fourthwall is the first merchandise candidate. Provider qualification and
-  checkout verification remain work. Comics and Alpal start as development
-  pages; Lulu and Makeship remain candidates for later relevant offerings.
-- Keeping private merch/design sources separate is the recommendation. The
-  discussion grants no repository transfer or public release of private assets.
+- `/` presents Ego Hygiene; `/store` is community commerce. `.play()` is a
+  featured artist. Curated designs and the large song-merch catalog keep
+  separate browsing surfaces and stable song destinations.
+- The website's approved public projection, catalog identifiers, and portable
+  domain remain the selected app boundary. Private merch/music source
+  repositories are not moved or exposed.
+- This repository's code, mock environment, issues, history, and MIT notice
+  remain available. Selective reuse needs immutable provenance and qualification.
+  No app is deleted, repository archived, or code copied by this checkpoint.
+- Netlify development preview after merges into `development` remains preferred;
+  website #29 owns CI/hosting work. Production hosting is still Google versus
+  Cloudflare. This review activates no workflow, credential, or infrastructure.
+- Fourthwall remains the first merchandise candidate and hosted checkout stays
+  the V1 boundary. Provider configuration does not prove an order. Store #32
+  retains cart/handoff qualification work; comics and campaigns follow later.
 
 ## Next checkpoint
 
-1. Refresh both source heads, current PRs, and actual checks; preserve new work.
-2. Review the proposed milestones and parent/child issue structure with the
-   user. Create or reorganize issues only after approval, reusing existing IDs
-   and preserving their historical parents and evidence. Then sync again.
-3. Once implementation is authorized, compare routing, catalog/contracts,
-   provider adapters, cart behavior, tests, and assets. Name one canonical store
-   with a preservation plan for useful work in the other repository.
-4. After ownership is settled, specify the deployment coordinator and preview
-   acceptance checks. No production platform is assumed.
+1. Refresh both repository heads and paired ownership PRs. Review the comparison,
+   preservation inventory, successor ADRs, and cutover/rollback criteria.
+2. After acceptance, replace active draft links with merged immutable evidence
+   and mark the successor ADRs accepted without rewriting historical records.
+3. Continue website #29 CI/preview work. Resolve website licensing ambiguity
+   before importing substantial MIT source; retain the original notice.
+4. Map useful commerce behavior into website contracts under existing issues.
+   Keep source research, provider qualification, and deployment evidence distinct.
 
-## Validation and limits
+## Verification and limits
 
-This capture changes Markdown only. Source and existing architecture were read.
-Documentation checks cover relative link targets against the complete source
-tree, available local anchors, balanced fences, whitespace, and file endings.
-Application, browser, provider, and deployment tests were not run. No
-purchase, provider activation, infrastructure change, issue creation, or
-repository transfer is claimed. Git history and the eventual PR hold the
-documentation diff and review evidence; refresh those before resuming.
+Source and test files were inspected at immutable revisions. Documentation
+verification covers links, structure, and whitespace. No new application tests,
+live provider sessions, checkout, payment, fulfillment, or deployment results
+are claimed. The dated receipt records scope and evidence for the next chat.
 
 A fresh chat can start with: "Read AGENTS.md and docs/context/current-state.md
-in egohygiene/store and egohygiene/egohygiene.io, refresh the linked revisions
-and PRs, then resume the next approved checkpoint."
+in egohygiene/store and egohygiene/egohygiene.io, refresh issue #75 and the paired
+ownership PRs, then resume the next approved checkpoint."

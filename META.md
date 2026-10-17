@@ -3,12 +3,12 @@ schema: aether.architecture-document/v1
 id: store-meta
 title: Ego Hygiene Store Meta
 kind: architecture-document
-version: 0.1.1
+version: 0.1.2
 status: provisional
 owners:
   - egohygiene
 created: 2026-08-19
-updated: 2026-10-16
+updated: 2026-10-17
 governed_by:
   - architecture-meta
 depends_on:
@@ -34,6 +34,13 @@ Operational continuity starts at [current state](docs/context/current-state.md)
 and its dated discussion checkpoint. These records link source revisions,
 conversation decisions, and remaining questions; they supplement this
 architecture graph rather than replace its durable decisions.
+
+The latest [ownership checkpoint](docs/context/2026-10-17-storefront-ownership.md)
+records the merged planning PRs and issue #75 comparison. [ADR-005](DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner)
+selects the website as canonical V1 owner in paired drafts awaiting review;
+older architecture documents describe this preserved reference implementation.
+Their provisional deployment claims do not override the ownership review or
+provide production evidence.
 
 | Artifact | Path | Category | Status | Governing specification | Upstream dependencies |
 | --- | --- | --- | --- | --- | --- |
