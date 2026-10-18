@@ -21,7 +21,7 @@ no deployment or source migration.
 
 Start with the [latest dated receipt](2026-10-17-storefront-ownership.md),
 [canonical comparison](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/storefront-ownership.md),
-and [ADR-005](../../DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner).
+and [ADR-0005](../../DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner).
 The [October 16 discussion](2026-10-16-store-launch-discussion.md) remains
 historical context. The planning PRs are merged; its earlier approval gate is
 superseded only for the authorized first ownership issue. The wider

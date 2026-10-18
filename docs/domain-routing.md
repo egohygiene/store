@@ -11,8 +11,8 @@ The [issue #75 comparison](https://github.com/egohygiene/egohygiene.io/blob/docs
 selects `egohygiene/egohygiene.io` as the canonical V1 storefront, built with the
 rest of the website as one composed artifact. This is recorded in paired draft
 PRs for review. The independent-deployment proposal below is historical context;
-[ADR-005](../DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner)
-describes its proposed supersession without erasing ADR-003.
+[ADR-0005](../DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner)
+describes its proposed supersession without erasing ADR-0003.
 
 The composed build does not require a separate store origin or `/store` proxy.
 Verify root/store direct navigation, assets, client navigation, refreshes, and
