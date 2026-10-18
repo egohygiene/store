@@ -1,5 +1,9 @@
 # Current handoff
 
+## Four-digit labels — 2026-10-18 UTC
+
+Five inline decision labels and current links are padded under [Hygiene #73](https://github.com/egohygiene/hygiene/issues/73), with a per-record map in root DECISIONS.md. Inverse-mapped body comparison and documentation link/diff checks pass. This bounded change preserves the historical ownership checkpoint below; refresh its live task state before resuming. No code, provider or deployment evidence is added.
+
 Snapshot: **2026-10-17 UTC**. Ownership comparison and review checkpoint;
 no deployment or source migration.
 

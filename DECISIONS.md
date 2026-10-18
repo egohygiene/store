@@ -37,13 +37,13 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 
 ## Index
 
-- ADR-001: Normalize providers behind a commerce port
-- ADR-002: Use hosted checkout
-- ADR-003: Deploy independently beneath the /store route
-- ADR-004: Preserve the community-store direction and reconcile deployment ownership
-- ADR-005: Select the website as the V1 storefront owner (proposed for review)
+- ADR-0001: Normalize providers behind a commerce port
+- ADR-0002: Use hosted checkout
+- ADR-0003: Deploy independently beneath the /store route
+- ADR-0004: Preserve the community-store direction and reconcile deployment ownership
+- ADR-0005: Select the website as the V1 storefront owner (proposed for review)
 
-## ADR-001: Normalize providers behind a commerce port
+## ADR-0001: Normalize providers behind a commerce port
 
 - **Status:** Accepted as the current architectural direction
 - **Date:** 2026-08-19
@@ -52,7 +52,7 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 - **Consequences:** The choice improves ownership and predictability while requiring maintained contracts, validation, and migration discipline.
 - **Reconsider when:** New evidence shows that the boundary prevents standalone usefulness, safety, portability, or maintainability.
 
-## ADR-002: Use hosted checkout
+## ADR-0002: Use hosted checkout
 
 - **Status:** Accepted as the current architectural direction
 - **Date:** 2026-08-19
@@ -61,7 +61,7 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 - **Consequences:** The choice improves ownership and predictability while requiring maintained contracts, validation, and migration discipline.
 - **Reconsider when:** New evidence shows that the boundary prevents standalone usefulness, safety, portability, or maintainability.
 
-## ADR-003: Deploy independently beneath the /store route
+## ADR-0003: Deploy independently beneath the /store route
 
 - **Status:** Accepted as the current architectural direction
 - **Date:** 2026-08-19
@@ -70,20 +70,20 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 - **Consequences:** The choice improves ownership and predictability while requiring maintained contracts, validation, and migration discipline.
 - **Reconsider when:** New evidence shows that the boundary prevents standalone usefulness, safety, portability, or maintainability.
 
-### Review note for ADR-003, 2026-10-16
+### Review note for ADR-0003, 2026-10-16
 
 The original record above is preserved. The website repository's
-[high-level ADR-004](https://github.com/egohygiene/egohygiene.io/blob/db634b887ede348ce85d9c03af789467ab535dcf/DECISIONS.md#adr-004-consolidate-the-store-v1-website-and-use-hosted-checkout)
+[high-level ADR-0004](https://github.com/egohygiene/egohygiene.io/blob/db634b887ede348ce85d9c03af789467ab535dcf/DECISIONS.md#adr-0004-consolidate-the-store-v1-website-and-use-hosted-checkout)
 instead places the canonical storefront in `apps/egohygiene.io`. Both
 repositories contain store implementations. This conflict must be reconciled;
 neither decision is silently superseded by the current discussion. Independent
 path routing and a composed build remain options, not approved topology.
 
-The subsequent [ADR-005](#adr-005-select-the-website-as-the-v1-storefront-owner)
+The subsequent [ADR-0005](#adr-0005-select-the-website-as-the-v1-storefront-owner)
 selects a successor direction for review. This October 16 note remains the
 historical conflict record, not the current work queue.
 
-## ADR-004: Preserve the community-store direction and reconcile deployment ownership
+## ADR-0004: Preserve the community-store direction and reconcile deployment ownership
 
 - **Status:** Accepted product goals and development-preview preference;
   canonical store ownership, deployment topology, and production host unresolved.
@@ -111,12 +111,12 @@ historical conflict record, not the current work queue.
   recommendation; no transfer decision has been made.
 - **Evidence:** [Dated checkpoint](docs/context/2026-10-16-store-launch-discussion.md)
   and [canonical launch-plan draft](https://github.com/egohygiene/egohygiene.io/blob/docs/store-launch-direction-20261016/docs/architecture/store-launch-plan.md).
-- **Supersedes:** None. Reconcile ADR-003 and the website's high-level ADR-004
+- **Supersedes:** None. Reconcile ADR-0003 and the website's high-level ADR-0004
   explicitly after the implementation comparison.
 - **Reconsider when:** The user approves canonical ownership, topology, or a
   production host, or provider evidence changes a proposed purchase flow.
 
-## ADR-005: Select the website as the V1 storefront owner
+## ADR-0005: Select the website as the V1 storefront owner
 
 - **Status:** Proposed for review in paired ownership PRs. The comparison is
   complete; deployment and source migration have not occurred.
@@ -146,9 +146,9 @@ historical conflict record, not the current work queue.
   and prefix-stripping examples here are historical reference, not instructions
   to deploy a second store. Netlify preview work remains under website #29;
   Google versus Cloudflare production hosting remains open.
-- **Supersession on acceptance:** Replace ADR-003's independent V1 deployment
-  direction and resolve the ownership/topology questions in ADR-004. Preserve
-  those records and their product goals. ADR-001 and ADR-002 remain applicable.
+- **Supersession on acceptance:** Replace ADR-0003's independent V1 deployment
+  direction and resolve the ownership/topology questions in ADR-0004. Preserve
+  those records and their product goals. ADR-0001 and ADR-0002 remain applicable.
 - **Evidence and counterpart:** [Ownership comparison](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/storefront-ownership.md),
   [website ADR 0007](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/decisions/0007-canonical-storefront-owner.md),
   and [dated receipt](docs/context/2026-10-17-storefront-ownership.md).
@@ -158,7 +158,7 @@ historical conflict record, not the current work queue.
 
 ## Open decisions
 
-- Acceptance of ADR-005 and its preservation plan in the paired ownership PRs.
+- Acceptance of ADR-0005 and its preservation plan in the paired ownership PRs.
 - Which commerce capabilities to reuse after qualification, and their destination contracts.
 - Production hosting and the exact implementation of the development-preview workflow.
 - Release and compatibility policy for the first stable version.
@@ -172,3 +172,14 @@ historical conflict record, not the current work queue.
 - **Proposed:** Target systems and later roadmap phases remain proposals until accepted and implemented.
 - **Open question:** Which parts of this draft should become active in the first independently versioned release?
 
+## Identifier format migration (2026-10-18)
+
+The maintainer selected four-digit numbering in [Hygiene #73](https://github.com/egohygiene/hygiene/issues/73). This padding-only migration changes current labels and anchors; logical numbers, decision content, dates and disposition remain unchanged. Git retains prior versions. New canonical records use `ADR-NNNN` under Hygiene policy v1.2.0.
+
+| Previous ID | Current ID | Record |
+| --- | --- | --- |
+| `ADR-001` | `ADR-0001` | [DECISIONS.md](DECISIONS.md#adr-0001-normalize-providers-behind-a-commerce-port) |
+| `ADR-002` | `ADR-0002` | [DECISIONS.md](DECISIONS.md#adr-0002-use-hosted-checkout) |
+| `ADR-003` | `ADR-0003` | [DECISIONS.md](DECISIONS.md#adr-0003-deploy-independently-beneath-the-store-route) |
+| `ADR-004` | `ADR-0004` | [DECISIONS.md](DECISIONS.md#adr-0004-preserve-the-community-store-direction-and-reconcile-deployment-ownership) |
+| `ADR-005` | `ADR-0005` | [DECISIONS.md](DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner) |

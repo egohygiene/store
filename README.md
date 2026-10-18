@@ -7,7 +7,7 @@ Fourthwall adapters, cart operations, and hosted-checkout handoff code.
 the existing website app as the canonical V1 storefront, with one composed
 build, in paired draft PRs for review. This repository remains available for
 selective reuse and provider research; it is not archived or replaced by a third
-implementation. See [ADR-005](DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner).
+implementation. See [ADR-0005](DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner).
 
 The repository boots in **mock commerce mode**, so it runs immediately without
 credentials. Fourthwall mode additionally requires a Storefront token and
