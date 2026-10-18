@@ -36,7 +36,7 @@ conversation decisions, and remaining questions; they supplement this
 architecture graph rather than replace its durable decisions.
 
 The latest [ownership checkpoint](docs/context/2026-10-17-storefront-ownership.md)
-records the merged planning PRs and issue #75 comparison. [ADR-005](DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner)
+records the merged planning PRs and issue #75 comparison. [ADR-0005](DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner)
 selects the website as canonical V1 owner in paired drafts awaiting review;
 older architecture documents describe this preserved reference implementation.
 Their provisional deployment claims do not override the ownership review or

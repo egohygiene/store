@@ -1,7 +1,7 @@
 # Store Architecture
 
 Read the [current handoff](context/current-state.md) and
-[ADR-005](../DECISIONS.md#adr-005-select-the-website-as-the-v1-storefront-owner)
+[ADR-0005](../DECISIONS.md#adr-0005-select-the-website-as-the-v1-storefront-owner)
 before architecture changes. The issue #75 comparison selects the website as
 the canonical V1 app and one composed build in paired drafts for review. The
 boundaries below describe this preserved reference implementation, not an
