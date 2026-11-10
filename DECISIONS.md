@@ -63,7 +63,8 @@ Do not rewrite historical context to fit current understanding. Amend a record f
 
 ## ADR-0003: Deploy independently beneath the /store route
 
-- **Status:** Accepted as the current architectural direction
+- **Status:** Historically accepted; independent V1 deployment superseded by
+  ADR-0005 on 2026-10-17. The original decision text below is preserved.
 - **Date:** 2026-08-19
 - **Context:** Repository evidence and ecosystem ownership require an explicit durable boundary.
 - **Decision:** Deploy independently beneath the /store route.
@@ -118,8 +119,9 @@ historical conflict record, not the current work queue.
 
 ## ADR-0005: Select the website as the V1 storefront owner
 
-- **Status:** Proposed for review in paired ownership PRs. The comparison is
-  complete; deployment and source migration have not occurred.
+- **Status:** Accepted by the maintainer; paired website #76 and store #34 merged
+  on 2026-10-17. Reconciled against live merge evidence on 2026-11-09; this records
+  the existing decision, not deployment or completed application migration.
 - **Date:** 2026-10-17 UTC.
 - **Issue:** [Website #75](https://github.com/egohygiene/egohygiene.io/issues/75).
 - **Context:** Both repositories contain real React/Vite storefronts. The
@@ -146,12 +148,14 @@ historical conflict record, not the current work queue.
   and prefix-stripping examples here are historical reference, not instructions
   to deploy a second store. Netlify preview work remains under website #29;
   Google versus Cloudflare production hosting remains open.
-- **Supersession on acceptance:** Replace ADR-0003's independent V1 deployment
+- **Supersession:** Replace ADR-0003's independent V1 deployment
   direction and resolve the ownership/topology questions in ADR-0004. Preserve
   those records and their product goals. ADR-0001 and ADR-0002 remain applicable.
-- **Evidence and counterpart:** [Ownership comparison](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/storefront-ownership.md),
-  [website ADR 0007](https://github.com/egohygiene/egohygiene.io/blob/docs/storefront-ownership-75/docs/architecture/decisions/0007-canonical-storefront-owner.md),
-  and [dated receipt](docs/context/2026-10-17-storefront-ownership.md).
+- **Evidence and counterpart:** [Accepted website comparison](https://github.com/egohygiene/egohygiene.io/blob/08174a9ce39dfd3f2be806181b20153e94642e6a/docs/architecture/storefront-ownership.md),
+  [website ADR 0007](https://github.com/egohygiene/egohygiene.io/blob/08174a9ce39dfd3f2be806181b20153e94642e6a/docs/architecture/decisions/0007-canonical-storefront-owner.md),
+  [store merge](https://github.com/egohygiene/store/commit/13279f96491d3dad49d9d6ebf558404eccc8103f),
+  [original receipt](docs/context/2026-10-17-storefront-ownership.md) and
+  [acceptance reconciliation](docs/context/2026-11-09-ownership-acceptance.md).
 - **Reconsider when:** A qualified requirement needs independent release,
   hosting, or security boundaries strongly enough to justify a second app;
   document its contract and cutover plan before changing topology.

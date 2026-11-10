@@ -3,27 +3,29 @@
 ## Mission
 
 Preserve the provider-neutral commerce reference and its evidence while the
-website owns the proposed V1 customer-facing storefront.
+website owns the accepted V1 customer-facing storefront.
 
 ## Start or resume
 
 Read [current state](docs/context/current-state.md), its latest dated checkpoint,
 and the linked ownership comparison before changing architecture. Refresh both
 repositories' heads, PRs, and checks. Website issue #75 selects
-`egohygiene/egohygiene.io` and one composed V1 build for review; this repository
-retains useful commerce code and research. The paired ownership PRs are drafts,
-so do not mistake the selection for an accepted deployment or completed migration.
+`egohygiene/egohygiene.io` and one composed V1 build; this repository retains useful
+commerce code and research. The paired ownership PRs, website #76 and store #34,
+are merged. Read the [acceptance reconciliation](docs/context/2026-11-09-ownership-acceptance.md).
+Acceptance concerns ownership and preservation; deployment, application migration
+and the later source-retirement follow-up have separate unfinished criteria.
 Consult [DECISIONS.md](DECISIONS.md) for durable decisions; dated conversation
 notes preserve the reasoning, preferences, and open questions behind them.
 
 At a checkpoint, update current state and add a dated note with source commits,
 decisions, actual validation, unresolved questions, and the next action. Do not
 replace historical notes with a transcript or treat them as new authorization.
-The latest instruction authorized merging the planning PRs and undertaking the
-first bounded ownership issue. The wider proposed issue hierarchy still awaits
-review. Repository transfer, provider activation, purchases, and deployment are
-not authorized by these records. Follow later explicit instructions when scope
-changes.
+The website's current closeout roadmap #84/#88 schedules further implementation
+and a consolidated owner review under #115. Keep useful source retirement under
+website #100 separate from the accepted ownership choice. Repository transfer,
+provider activation, purchases and deployment are not authorized by these records.
+Follow later explicit instructions when scope changes.
 
 ## Dependency direction
 

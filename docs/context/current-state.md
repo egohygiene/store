@@ -1,5 +1,22 @@
 # Current handoff
 
+## Current: paired ownership accepted; stale status reconciled — 2026-11-09
+
+Live GitHub confirms website #76 and store #34 are merged. The
+[reconciliation receipt](2026-11-09-ownership-acceptance.md) pins both merge commits
+and records the remaining website #75 closeout. ADR-0005 now reflects the already
+accepted website-owned V1 storefront; ADR-0003's independent deployment is
+historical. AGENTS and the active evidence links agree. The earlier open/unmerged
+snapshot and October discussion below are historical, not the current status.
+
+This documentation branch starts from store main
+`5786fd40bfe40b0d338eb96087355b98f7e16d42`. No commerce code, source history, MIT
+notice, account, workflow or deployment configuration changes. Website #100 owns
+the separate preservation/retirement follow-up; source retirement is not complete.
+Next: review/integrate this status correction with website #75's closeout packet.
+Provider/product qualification and later publication remain website #38/#39/#89;
+this branch does not authorize those actions.
+
 ## Four-digit labels — 2026-10-18 UTC
 
 Five inline decision labels and current links are padded under [Hygiene #73](https://github.com/egohygiene/hygiene/issues/73), with a per-record map in root DECISIONS.md. Inverse-mapped body comparison and documentation link/diff checks pass. This bounded change preserves the historical ownership checkpoint below; refresh its live task state before resuming. No code, provider or deployment evidence is added.
